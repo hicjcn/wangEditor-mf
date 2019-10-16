@@ -3640,11 +3640,11 @@ Text.prototype = {
         // 添加编辑区域拖拽事件
         var $textElem = editor.$textElem;
         $textElem.on('drop', function (e) {
-            e.preventDefault();
             var files = e.dataTransfer && e.dataTransfer.files;
             if (!files || !files.length) {
                 return;
             }
+            e.preventDefault();
 
             // 上传图片
             var uploadImg = editor.uploadImg;
